@@ -1,0 +1,106 @@
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+$bg-url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC";
+$bg-width: 50px;
+$bg-height: 50px;
+
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  // Safari
+  100% {
+    background-position: $bg-width $bg-height;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  // Mozilla
+  100% {
+    background-position: $bg-width $bg-height;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  // Opera
+  100% {
+    background-position: $bg-width $bg-height;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  // IE
+  100% {
+    background-position: $bg-width $bg-height;
+  }
+}
+
+@-webkit-keyframes bg-scrolling {
+  // Safari
+  0% {
+    background-position: $bg-width $bg-height;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  // Mozilla
+  0% {
+    background-position: $bg-width $bg-height;
+  }
+}
+@-o-keyframes bg-scrolling {
+  // Opera
+  0% {
+    background-position: $bg-width $bg-height;
+  }
+}
+@keyframes bg-scrolling {
+  // IE
+  0% {
+    background-position: $bg-width $bg-height;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: url($bg-url) repeat 0 0;
+
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  animation: bg-scrolling-reverse 0.92s infinite;
+
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+#number-counter {
+  font-size: 6rem;
+}
+
+.btn {
+  letter-spacing: 6px;
+  background: transparent;
+  color: #222;
+  border: 2px solid;
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+  padding: 0.375rem 0.75rem;
+}
+
+.btn:hover {
+  background: #222;
+  border-color: #222;
+  color: white;
+  box-shadow: none;
+}
